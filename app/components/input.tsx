@@ -16,7 +16,7 @@ export default function Input({ placeholder, value, onChangeText,secureTextEntry
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        className="bg-white border border-gray-300 rounded-2xl px-4 py-3 text-gray-800 text-base shadow-sm space-y-4"
+        className="bg-white border border-gray-300 rounded-2xl px-4 py-3 text-gray-800 text-base  space-y-4"
         placeholderTextColor="#9CA3AF"
       />
     </View>

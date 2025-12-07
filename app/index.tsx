@@ -1,47 +1,65 @@
-// app/index.tsx
-import { Stack } from 'expo-router';
-import { useState } from 'react';
-import { Text, View } from 'react-native';
-import { Boton } from './components/Boton';
-import Logo from './components/image'; // componentes reutilizables
-import Input from './components/input';
 
-// const StyledView = styled(View);
+import { Stack } from "expo-router";
+import { useState } from "react";
+import { Text, View } from "react-native";
+import { Boton } from "./components/Boton";
+import Logo from "./components/image";
+import Input from "./components/input";
+
+// OBTENER API_URL CORRECTO
+
+
 
 export default function LoginScreen() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    // Aquí va tu lógica de autenticación real
     if (email && password) {
-    //   router.push('/HomeScreen'); // navega a la pantalla principal después del login
+
+      // Aquí iría tu fetch()
     }
   };
 
   return (
-      <>
+    <>
       <Stack.Screen options={{ headerShown: false }} />
-      <View className="flex-1 justify-center p-6 bg-gray-100">
+          
 
-        <View className='items-center justify-center'>
-
-      <Text className="text-2xl font-bold mb-6 text-center">TrakerDriver</Text>
-      <Logo></Logo>
+      <View className="flex-1 justify-center p-6" style={{ backgroundColor: "#13161C" }}>
+        <View className="items-center justify-center">
+          <Text className="text-5xl font-bold mb-6 text-center text-white">
+            TrakerDriver
+          </Text>
+          <Logo />
         </View>
 
-      <Input placeholder="Usuario"/>
-      <Input placeholder="Contraseña" secureTextEntry={true}/>
+        <View
+          style={{ backgroundColor: "#1E2229" }}
+          className="p-5 rounded-3xl border border-gray-500 mt-5"
+        >
 
-      {/* <Input placeholder="Email" value={email} onChangeText={setEmail} />
-      <Input placeholder="Contraseña" value={password} onChangeText={setPassword} secureTextEntry /> */}
+          <Input placeholder="Usuario" />
+          <Input placeholder="Contraseña" secureTextEntry />
 
-      <View className='items-center'>
-        <Boton clase="text-white font-bold text-center" background="bg-blue-500 p-4 rounded-3xl px-6 py-3 w-40" texto="Iniciar Sesión"/>
+          <View className="items-center mt-2">
+            <Boton
+              clase="text-white font-bold text-center"
+              background="bg-lime-600 p-4 rounded-3xl px-6 py-3 w-40"
+              texto="Iniciar Sesión"
+            />
+          </View>
+        </View >
+
+<View className="flex-row justify-between mt-3 w-90">
+  <Boton clase="text-white font-bold" texto="No estás registrado?" />
+  <Boton clase="text-white font-bold" texto="Olvidaste tu contraseña?" />
+</View>
+
+
+
       </View>
-    </View>
-      </>
-
-
+    
+    </>
   );
 }
