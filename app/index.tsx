@@ -25,12 +25,12 @@ export default function LoginScreen() {
           behavior={Platform.OS === "ios" ? "padding" : undefined}
           style={{ flex: 1 }}
         >
-          <View className="flex-1 justify-center p-6" style={{ backgroundColor: "#13161C" }}>
+          <View className="flex-1 justify-center p-6" style={{ backgroundColor: "#0D1B2A" }}>
             <View className="items-center justify-center">
-              <Text className="text-5xl font-bold mb-6 text-center text-white">
-                TripDrive
-              </Text>
               <Logo />
+              <Text className="text-5xl font-bold mb-6 text-center text-white">
+                FoxDriv
+              </Text>
             </View>
 
             <View

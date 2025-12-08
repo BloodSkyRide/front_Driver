@@ -12,8 +12,8 @@ export default function imagen(){
         <View>
 
             <Image
-  source="https://reactnative.dev/img/tiny_logo.png"
-  style={{ width: 120, height: 120, borderRadius: 10 }}
+  source={require("../../assets/images/FoxDrive.png")}
+  style={{ width: 200, height: 200, borderRadius: 10 }}
   contentFit="cover"
 />
 
